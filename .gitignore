@@ -1,0 +1,24 @@
+.next
+node_modules
+.vercel
+.env*
+!.env.example
+npm-debug.log*
+
+# 착한티켓 템플릿에서 복제된 비활성 브랜드 산출물
+docs/BRAND-V2-ASSET-NOTES.md
+docs/screenshots/desktop-*.png
+docs/screenshots/mobile-390-*.png
+docs/screenshots/mobile-390x844*.png
+public/assets/brand/chakhan-ticket-*.svg
+public/assets/common/hero-phone*.png
+public/assets/common/daily-hero-generated-source.png
+public/assets/common/daily-hero.png
+public/assets/common/daily-hero-v2.png
+public/assets/common/*-brand.png
+public/assets/icons/*-brand.png
+public/assets/common/process-steps-daily.png
+public/assets/icons/*-daily.png
+public/assets/brand/daily-ticket-*
+assets/_source/daily-hero-imagegen-v2.png
+docs/DAILY-ASSET-NOTES.md

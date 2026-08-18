@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+  <title id="title">고속티켓 심볼</title>
+  <circle cx="50" cy="50" r="47" fill="#eff6ff"/>
+  <path d="M30 24h48a8 8 0 0 1 8 8v36a8 8 0 0 1-8 8H30a8 8 0 0 1-8-8V32a8 8 0 0 1 8-8Z" fill="#1d4ed8"/>
+  <path d="M22 38H10M22 50H5M22 62H10" stroke="#7dd3fc" stroke-width="6" stroke-linecap="round"/>
+  <path d="m41 39 12 11-12 11M57 39l12 11-12 11" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="79" cy="72" r="10" fill="#a3e635"/>
+</svg>
