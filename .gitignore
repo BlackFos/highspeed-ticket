@@ -22,3 +22,6 @@ public/assets/icons/*-daily.png
 public/assets/brand/daily-ticket-*
 assets/_source/daily-hero-imagegen-v2.png
 docs/DAILY-ASSET-NOTES.md
+
+.vercel
+.env*
