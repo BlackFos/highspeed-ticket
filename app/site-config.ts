@@ -2,6 +2,7 @@ export const siteConfig = {
   id: "highspeed-ticket",
   name: "고속티켓",
   domain: "고속티켓.com",
+  businessOwnerName: "착한상품권",
   businessRegistrationNumber: "454-96-01965",
   phoneHref: "tel:01021944939",
   kakaoUrl: "https://open.kakao.com/o/sireupJi" as string | null,
