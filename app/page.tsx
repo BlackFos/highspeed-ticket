@@ -188,18 +188,12 @@ export default function Home() {
             {siteConfig.name}
           </a>
           <div className="footer-info">
-            <span>
-              <b>상호명</b> : {siteConfig.name}
-            </span>
-            <span>
-              <b>상담방법</b> : 전화·카카오톡
-            </span>
-            <span>
-              <b>
-                {siteConfig.businessOwnerName}({siteConfig.name}) 사업자 번호
-              </b>{" "}
-              : {siteConfig.businessRegistrationNumber}
-            </span>
+            <p>
+              {siteConfig.businessOwnerName}({siteConfig.name}) |{" "}
+              <a href={siteConfig.phoneHref}>tel.{siteConfig.phoneDisplay}</a>
+            </p>
+            <p>대표자 : {siteConfig.representative}</p>
+            <p>사업자 : {siteConfig.businessRegistrationNumber}</p>
           </div>
           <div className="footer-support">
             <a href={siteConfig.phoneHref} aria-label={`${siteConfig.name} 전화문의`}>
@@ -209,9 +203,7 @@ export default function Home() {
               <Image src="/assets/icons/kakao-white.png" width={30} height={28} alt="" />
             </KakaoButton>
           </div>
-          <p className="copyright">
-            COPYRIGHT . <b>{siteConfig.name}</b> ALL RIGHTS RESERVED.
-          </p>
+          <p className="copyright">@2026 {siteConfig.domain} All right reserved</p>
         </div>
       </footer>
 

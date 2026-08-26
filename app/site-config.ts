@@ -3,7 +3,9 @@ export const siteConfig = {
   name: "고속티켓",
   domain: "고속티켓.com",
   businessOwnerName: "착한상품권",
+  representative: "강현민",
   businessRegistrationNumber: "454-96-01965",
+  phoneDisplay: "010-2194-4939",
   phoneHref: "tel:01021944939",
   kakaoUrl: "https://open.kakao.com/o/sireupJi" as string | null,
   colors: {
