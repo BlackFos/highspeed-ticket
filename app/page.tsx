@@ -127,29 +127,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section process-section">
-          <div className="content-width">
-            <p className="eyebrow">HOW?</p>
-            <h2 className="section-heading large">
-              <em>{siteConfig.name}</em> 이용 절차
-            </h2>
-            <Image
-              className="process-image"
-              src={assets.common.process.src}
-              width={1368}
-              height={1020}
-              alt={assets.common.process.alt}
-              loading="eager"
-            />
-            <p className="warning-copy">
-              정식등록업체 <em>{siteConfig.name}</em>에서 안내된 절차에 따라 이용하세요!
-            </p>
-            <p className="warning-note">
-              <em>*</em> 허가 여부와 업체 정보를 확인하지 않은 거래는 피해가 발생할 수 있으니 주의해 주세요.
-            </p>
-          </div>
-        </section>
-
         <section className="section products-section">
           <div className="content-width">
             <h2 className="section-heading large products-title">

@@ -43,14 +43,6 @@ export const assets = {
       source: "highspeed-ticket-original",
       replaceable: true,
     },
-    process: {
-      id: "process-steps",
-      src: "/assets/common/process-steps-highspeed.png",
-      alt: "전화 또는 카카오 상담, 상품권 매입 및 결제 진행, 확인 후 입금 순서",
-      role: "process guide",
-      source: "ticket-bora-reference",
-      replaceable: true,
-    },
   },
   why: [
     ["why-speed", "/assets/icons/why-speed-highspeed.png", "빠른 안내"],
