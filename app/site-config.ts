@@ -1,3 +1,5 @@
+const phoneDisplay = "010-3971-3389";
+
 export const siteConfig = {
   id: "highspeed-ticket",
   name: "고속티켓",
@@ -5,8 +7,8 @@ export const siteConfig = {
   businessOwnerName: "착한상품권",
   representative: "강현민",
   businessRegistrationNumber: "454-96-01965",
-  phoneDisplay: "010-2194-4939",
-  phoneHref: "tel:01021944939",
+  phoneDisplay,
+  phoneHref: `tel:${phoneDisplay.replaceAll("-", "")}`,
   kakaoUrl: "https://open.kakao.com/o/sireupJi" as string | null,
   colors: {
     main: "#1d4ed8",
