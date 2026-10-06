@@ -7,6 +7,7 @@
 - `app/sitemap.ts`: 실제 페이지 목록. 새 페이지가 생기면 여기에도 추가한다.
 - `app/robots.ts`: 크롤링 허용과 사이트맵 주소. 대표 도메인은 `app/site-config.ts`를 공통으로 사용한다.
 - 제출 시 홈페이지 주소 대신 위 XML 주소 전체를 입력한다. 사이트맵 처리 성공과 실제 검색 색인·순위는 별개다.
+- 운영 반영 완료: 소스 `16731bd`, Vercel `dpl_GRiWU5nmdG51qCVPJYhQsoc7jtYz` READY. 실제 도메인의 sitemap.xml HTTP 200/application/xml, robots.txt 200, 홈 200·자기 주소 canonical·noindex 없음, 미존재 경로 404를 확인했다. 로컬 빌드·ESLint도 통과했다. Search Console 계정 내 제출은 사용자가 진행한다.
 
 착한티켓 골든 마스터의 구조와 반응형 규격을 유지하면서 고속티켓 전용 블루·라임 팔레트와 에셋으로 재구현한 Next.js 랜딩페이지다.
 
