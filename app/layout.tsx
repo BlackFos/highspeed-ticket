@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
+import { siteConfig } from "./site-config";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://xn--299a350b00j9wd.com"),
+  metadataBase: new URL(`https://${siteConfig.domain}`),
+  alternates: { canonical: "/" },
   title: "고속티켓 | 상품권 상담 전문",
   description: "고속티켓 상품권 상담 안내 페이지입니다.",
   openGraph: {

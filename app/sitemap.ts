@@ -1,0 +1,6 @@
+import type { MetadataRoute } from "next";
+import { siteConfig } from "./site-config";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [{ url: new URL(`https://${siteConfig.domain}/`).href }];
+}
