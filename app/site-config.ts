@@ -1,4 +1,8 @@
+import { smsLink } from "./contact-utils";
+
 const phoneDisplay = "010-3971-3389";
+
+const smsMessage = "안녕하세요 문의드립니다";
 
 export const siteConfig = {
   id: "highspeed-ticket",
@@ -9,13 +13,14 @@ export const siteConfig = {
   businessRegistrationNumber: "454-96-01965",
   phoneDisplay,
   phoneHref: `tel:${phoneDisplay.replaceAll("-", "")}`,
-  kakaoUrl: "https://open.kakao.com/o/sireupJi" as string | null,
+  smsMessage,
+  smsHref: smsLink(phoneDisplay, smsMessage),
   colors: {
     main: "#1d4ed8",
     sub: "#172554",
     surface: "#eff6ff",
     productSurface: "#f7faff",
-    kakao: "#ffdc42",
+    sms: "#ffdc42",
     danger: "#de4e4e",
     caption: "#999999",
     text: "#111c44",

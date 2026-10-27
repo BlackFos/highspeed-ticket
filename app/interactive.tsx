@@ -21,63 +21,12 @@ export function HeaderVisibility() {
   return null;
 }
 
-export function KakaoButton({
-  className,
-  ariaLabel,
-  children,
-}: {
-  className?: string;
-  ariaLabel?: string;
-  children: React.ReactNode;
+export function SmsButton({ className, ariaLabel, children }: {
+  className?: string; ariaLabel?: string; children: React.ReactNode;
 }) {
-  const [open, setOpen] = useState(false);
-
-  if (siteConfig.kakaoUrl) {
-    return (
-      <a className={className} href={siteConfig.kakaoUrl} target="_blank" rel="noreferrer">
-        {children}
-      </a>
-    );
-  }
-
-  return (
-    <>
-      <button
-        aria-label={ariaLabel}
-        className={className}
-        type="button"
-        onClick={() => setOpen(true)}
-      >
-        {children}
-      </button>
-      {open ? (
-        <div className="modal-backdrop">
-          <section
-            aria-labelledby="kakao-modal-title"
-            aria-modal="true"
-            className="kakao-modal"
-            role="dialog"
-          >
-            <button className="modal-close" type="button" onClick={() => setOpen(false)} aria-label="닫기">
-              ×
-            </button>
-            <Image
-              src="/assets/brand/highspeed-ticket-mark.svg"
-              width={72}
-              height={72}
-              alt=""
-            />
-            <h2 id="kakao-modal-title">고속티켓 카카오톡 상담</h2>
-            <p>상담 링크 등록을 준비하고 있습니다.</p>
-            <p className="modal-note">현재는 전화 상담을 이용해 주세요.</p>
-            <a className="modal-phone" href={siteConfig.phoneHref}>
-              전화상담 바로 연결
-            </a>
-          </section>
-        </div>
-      ) : null}
-    </>
-  );
+  return <a className={className} aria-label={ariaLabel} href={siteConfig.smsHref}
+    title={`문자 문의 ${siteConfig.phoneDisplay}`}
+    data-contact-channel="sms" data-contact-placement="sms-button">{children}</a>;
 }
 
 export function FloatingActions() {
@@ -100,7 +49,7 @@ export function FloatingActions() {
       >
         <Image src="/assets/icons/top.png" width={20} height={20} alt="" />
       </button>
-      <a className="floating-card" href={siteConfig.phoneHref}>
+      <a className="floating-card" href={siteConfig.phoneHref} data-contact-channel="phone" data-contact-placement="floating">
         <span className="floating-icon main">
           <Image src="/assets/icons/call-white.png" width={20} height={20} alt="" />
         </span>
@@ -109,15 +58,15 @@ export function FloatingActions() {
           <b>전화 문의하기</b>
         </span>
       </a>
-      <KakaoButton className="floating-card">
-        <span className="floating-icon kakao">
-          <Image src="/assets/icons/kakao-dark.png" width={20} height={20} alt="" />
+      <SmsButton className="floating-card">
+        <span className="floating-icon sms">
+          <Image src="/assets/icons/sms.svg" width={20} height={20} alt="" />
         </span>
         <span className="floating-copy">
-          <small>클릭 시 카톡상담 안내</small>
-          <b>고속티켓 상담</b>
+          <small>클릭 시 바로 문의하기</small>
+          <b>바로 문의하기</b>
         </span>
-      </KakaoButton>
+      </SmsButton>
     </aside>
   );
 }

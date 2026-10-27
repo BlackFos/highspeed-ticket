@@ -1,0 +1,14 @@
+# Deploy only application sources and public web assets.
+.git/
+.next/
+.vercel/
+node_modules/
+.env*
+.local/
+/assets/
+/docs/
+/reference/
+/work/
+/outputs/
+*.log
+*.tsbuildinfo

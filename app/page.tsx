@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { assets } from "./asset-registry";
 import { siteConfig } from "./site-config";
-import { FloatingActions, HeaderVisibility, KakaoButton } from "./interactive";
+import { FloatingActions, HeaderVisibility, SmsButton } from "./interactive";
 import { StatusTicker } from "./status-ticker";
 
 const whyItems = [
@@ -63,7 +63,7 @@ export default function Home() {
 
         <section className="contact-section" aria-label="상담 연결">
           <div className="content-width contact-cards">
-            <a className="contact-card phone-card" href={siteConfig.phoneHref}>
+            <a className="contact-card phone-card" href={siteConfig.phoneHref} data-contact-channel="phone" data-contact-placement="page-contact">
               <b>{siteConfig.name} 고객센터</b>
               <strong>전화 문의하기</strong>
               <span>
@@ -72,15 +72,15 @@ export default function Home() {
               </span>
               <small>클릭 시 바로 연결됩니다</small>
             </a>
-            <KakaoButton className="contact-card kakao-card">
-              <b>🚨 카카오톡 채널 사칭 주의 🚨</b>
-              <strong>카카오톡 문의하기</strong>
+            <SmsButton className="contact-card sms-card">
+              <b>{siteConfig.name} 문자 상담</b>
+              <strong>바로 문의하기</strong>
               <span>
-                <Image src="/assets/icons/kakao-dark.png" width={20} height={20} alt="" />
-                클릭 시 카톡상담 안내
+                <Image src="/assets/icons/sms.svg" width={20} height={20} alt="" />
+                클릭 시 바로 문의하기
               </span>
-              <small>공식 링크 등록 후 바로 연결됩니다</small>
-            </KakaoButton>
+              <small>문자 앱에서 내용을 확인하고 전송해 주세요</small>
+            </SmsButton>
           </div>
         </section>
 
@@ -167,18 +167,18 @@ export default function Home() {
           <div className="footer-info">
             <p>
               {siteConfig.businessOwnerName}({siteConfig.name}) |{" "}
-              <a href={siteConfig.phoneHref}>tel.{siteConfig.phoneDisplay}</a>
+              <a href={siteConfig.phoneHref} data-contact-channel="phone" data-contact-placement="page-contact">tel.{siteConfig.phoneDisplay}</a>
             </p>
             <p>대표자 : {siteConfig.representative}</p>
             <p>사업자 : {siteConfig.businessRegistrationNumber}</p>
           </div>
           <div className="footer-support">
-            <a href={siteConfig.phoneHref} aria-label={`${siteConfig.name} 전화문의`}>
+            <a href={siteConfig.phoneHref} data-contact-channel="phone" data-contact-placement="page-contact" aria-label={`${siteConfig.name} 전화문의`}>
               <Image src="/assets/icons/call-white.png" width={30} height={28} alt="" />
             </a>
-            <KakaoButton ariaLabel={`${siteConfig.name} 카카오톡 문의`}>
-              <Image src="/assets/icons/kakao-white.png" width={30} height={28} alt="" />
-            </KakaoButton>
+            <SmsButton ariaLabel={`${siteConfig.name} 문자 문의`}>
+              <Image src="/assets/icons/sms.svg" width={30} height={28} alt="" />
+            </SmsButton>
           </div>
           <p className="copyright">@2026 {siteConfig.domain} All right reserved</p>
         </div>
@@ -186,14 +186,14 @@ export default function Home() {
 
       <FloatingActions />
       <nav className="mobile-contact" aria-label="모바일 빠른 상담">
-        <a href={siteConfig.phoneHref}>
+        <a href={siteConfig.phoneHref} data-contact-channel="phone" data-contact-placement="page-contact">
           <Image src="/assets/icons/call-white.png" width={25} height={25} alt="" />
           <span>클릭 시 전화상담 연결</span>
         </a>
-        <KakaoButton>
-          <Image src="/assets/icons/kakao-dark.png" width={25} height={25} alt="" />
-          <span>클릭 시 카톡상담 안내</span>
-        </KakaoButton>
+        <SmsButton>
+          <Image src="/assets/icons/sms.svg" width={25} height={25} alt="" />
+          <span>클릭 시 바로 문의하기</span>
+        </SmsButton>
       </nav>
     </>
   );

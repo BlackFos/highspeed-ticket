@@ -15,7 +15,7 @@
   --sub-color: #172554;
   --bg-color: #eff6ff;
   --product-bg: #f7faff;
-  --kakao-color: #ffdc42;
+  --sms-color: #ffdc42;
   --danger-color: #de4e4e;
   --caption-color: #999;
   --text-color: #111c44;
@@ -190,8 +190,8 @@ main {
   background: linear-gradient(145deg, #fffdf7, var(--main-cream));
 }
 
-.kakao-card {
-  background: var(--kakao-color);
+.sms-card {
+  background: var(--sms-color);
 }
 
 .contact-card b {
@@ -199,7 +199,7 @@ main {
   font-size: 14px;
 }
 
-.kakao-card b {
+.sms-card b {
   color: #282828;
 }
 
@@ -224,7 +224,7 @@ main {
   background: linear-gradient(135deg, var(--main-color), var(--sub-color));
 }
 
-.kakao-card span {
+.sms-card span {
   background: white;
 }
 
@@ -669,8 +669,8 @@ main {
   background: linear-gradient(135deg, var(--main-color), var(--sub-color));
 }
 
-.floating-icon.kakao {
-  background: var(--kakao-color);
+.floating-icon.sms {
+  background: var(--sms-color);
 }
 
 .floating-copy {
@@ -705,7 +705,7 @@ main {
   background: rgba(11, 23, 61, 0.76);
 }
 
-.kakao-modal {
+.sms-modal {
   position: relative;
   display: flex;
   width: min(100%, 480px);
@@ -717,16 +717,16 @@ main {
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
 }
 
-.kakao-modal h2 {
+.sms-modal h2 {
   margin: 18px 0 12px;
   font-size: 24px;
 }
 
-.kakao-modal p {
+.sms-modal p {
   line-height: 1.6;
 }
 
-.kakao-modal .modal-note {
+.sms-modal .modal-note {
   color: var(--caption-color);
   font-size: 14px;
 }
@@ -974,7 +974,7 @@ main {
   }
 
   .mobile-contact button {
-    background: var(--kakao-color);
+    background: var(--sms-color);
   }
 }
 
