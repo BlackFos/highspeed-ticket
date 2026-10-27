@@ -1,5 +1,7 @@
 # Google Ads 전화 문자 문의 관리
 
+Clixtell 설치·교체 위치는 [CLIXTELL.md](CLIXTELL.md)를 참고한다. Google Ads 이벤트와는 별도 모듈이다.
+
 - 기본 태그 및 전환라벨: `content/tracking.json`.
 - 번호와 문자 기본 문구: `app/site-config.ts` (세이프뱅크는 `content/site.json`).
 - 문의 링크 규칙: `app/contact-utils.ts`; 클릭 추적 및 iOS 문자 호환: `app/tracking-script.ts`.

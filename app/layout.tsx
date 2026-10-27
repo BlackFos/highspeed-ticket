@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { siteConfig } from "./site-config";
 import "./globals.css";
 import { GoogleAds } from "./google-ads";
+import { ClixtellTracking } from "./clixtell";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${siteConfig.domain}`),
@@ -26,7 +27,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ko">
-      <body>{children}<GoogleAds /></body>
+      <body><ClixtellTracking />{children}<GoogleAds /></body>
     </html>
   );
 }
